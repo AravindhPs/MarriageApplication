@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>        
+    <head>
+            <title>Marriage Invitations</title>
+            <link rel="stylesheet" href="Style.css"/>
+            <script type="text/javascript" src="js.js"> </script>
+            <style>                
+
+</style>             
+    </head>
+    <body> 
+       <img src="Images/Welcome-min.jpg" alt="background" class="bg"/>   
+       <form class="secondpageform" style="text-align:center" action="MarriageFunction3.html">               
+            <div>           
+                <h2>Hello <span  class="two" id="getName"> </span>, Welcome here !!!</h2>           
+            </div>
+           <div>
+                <h2>Why you been here??? Want to know??? 
+                    <p> 
+                    <button class="flash-button" style="cursor:pointer;background-color: darkgrey; width: 15%; padding: 5px">Yes</button>
+                    <input class="flash-button" type="button" onclick="location.href='index.html'"  style="cursor:pointer;background-color: darkgrey; width: 15%; padding: 5px" value="No">
+                 </p> </h2>
+           </div>    
+       </form>  
+       <script>
+           window.onload = function () {
+    var url = document.location.href,params = url.split('?')[1].split('&'),data = {}, tmp;
+    for (var i = 0, l = params.length; i < l; i++) 
+    {
+         tmp = params[i].split('=');
+         data[tmp[0]] = tmp[1];
+         console.log(data[tmp[i]]);
+    }
+    document.getElementById('getName').innerHTML = data.username;
+}
+       </script>                     
+    </body>    
+</html>
